@@ -13,9 +13,9 @@ void printInt(int i) {
 }
 
 int main() {
-  std::vector<int> thing{1,2,3,4};
-  print_json(&thing.front(), &thing.front()+thing.size());
+  std::vector<int> v{1,2,3,4};
+  print_json(&v.front(), &v.front()+v.size());
   std::cout << std::endl;
-  print_json_branchless(&thing.front(), &thing.front()+thing.size());
+  print_json_branchless(&v.front(), &v.front()+v.size());
   std::cout << std::endl;
 }
