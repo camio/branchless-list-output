@@ -5,6 +5,11 @@ void printInt(int);
 
 void print_json(int * pBegin, int *pEnd)
 {
+  if (pBegin == pEnd) {
+    printChar('[');
+    printChar(']');
+    return;
+  }
   bool saw = false;
   for( int * iter = pBegin; iter != pEnd; iter++ ) {
     if( !saw )
@@ -19,6 +24,11 @@ void print_json(int * pBegin, int *pEnd)
 
 void print_json_branchless(int * pBegin, int *pEnd)
 {
+  if (pBegin == pEnd) {
+    printChar('[');
+    printChar(']');
+    return;
+  }
   char y = '[';
   for( int * iter = pBegin; iter != pEnd; iter++ ) {
     char z = ',';
